@@ -1,0 +1,4 @@
+.mobile-menu {
+  background-color: var(--mat-sys-background);
+  @apply md:hidden absolute top-0 left-0 w-full h-screen flex flex-col px-6 py-3;
+}

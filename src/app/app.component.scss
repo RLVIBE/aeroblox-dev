@@ -1,0 +1,7 @@
+:host {
+  @apply flex flex-col relative h-screen overflow-hidden;
+
+  .header {
+    @apply w-full absolute inset-x-0 top-0 z-50;
+  }
+}

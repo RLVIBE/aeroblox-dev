@@ -1,0 +1,25 @@
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.flex-col-center {
+  @apply flex flex-col justify-center items-center;
+}
+.flex-between-center {
+  @apply flex justify-between items-center;
+}
+
+.hover-transition {
+  @apply transition duration-300 ease-out hover:ease-in;
+}
+
+.line-ellipsis {
+  @apply whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.non-selectable {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

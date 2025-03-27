@@ -1,0 +1,44 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use './assets/styles/theme-colors.scss' as ab-theme;
+@use './assets/styles/color-scheme.scss' as *;
+@use './assets/styles/common.scss' as *;
+
+html {
+  // Must specify color-scheme for theme mixin to automatically work
+  color-scheme: light dark;
+
+  // Create one theme that works automatically for light and dark theme
+  @include mat.theme((
+    color: (
+      primary: ab-theme.$primary-palette,
+      tertiary: ab-theme.$tertiary-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  // Use high contrast values when users prefer contrast
+  @media (prefers-contrast: more) {
+    @include ab-theme.high-contrast-overrides(color-scheme);
+  }
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--mat-sys-background);
+}
+
+html.light {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
