@@ -67,7 +67,7 @@ export class AppComponent implements OnInit, AfterViewInit {
           }, 2000); // Delay before starting fade-out
         }
       });
-    }, 500);
+    }, 1000);
   }
 
   ngAfterViewInit() {
